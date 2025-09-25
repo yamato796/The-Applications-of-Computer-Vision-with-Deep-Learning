@@ -16,10 +16,10 @@ def show_with_matplotlib(color_img, title, pos):
 plt.figure(figsize=(10, 4))
 plt.suptitle("Sobel operator and cv2.addWeighted() to show the output", fontsize=14, fontweight='bold')
 
-image_filtered = cv2.GaussianBlur(image, (3, 3), 0)
+image_filtered = cv2.GaussianBlur(image, (7, 7), 5)
 
-#cv2.imshow("Gaussian filtered", image_filtered)
-#cv2.waitKey(0)
+cv2.imshow("Gaussian filtered", image_filtered)
+cv2.waitKey(0)
 
 gray_image = cv2.cvtColor(image_filtered, cv2.COLOR_BGR2GRAY)
 
